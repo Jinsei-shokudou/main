@@ -20,7 +20,7 @@ body {
   }
   
 
-  .container a{
+  .header-left a{
     color: white;
     transition: all;
   }
