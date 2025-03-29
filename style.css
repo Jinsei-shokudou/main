@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
 
 body {
     font-family: "cursive";
@@ -21,8 +20,9 @@ body {
   }
   
 
-  .container h1{
+  .container a{
     color: white;
+    transition: all;
   }
 
   .container p{
