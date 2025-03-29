@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+body {
+    font-family: "cursive";
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 20px; 
+  }
+  
+
+  .container h1{
+    color: white;
+  }
+
+  .container p{
+    color: red;
+  }
+  
+  .top-wrapper {
+    height: 1000px;
+    background-image: url(IMG_7484_2.jpg);
+    background-size: cover;
+    font-family: cursive;
+  }
+  
+  .top-wrapper h1 {
+    padding-top: 300px; 
+    opacity: 1.0;
+    font-size: 90px;
+    letter-spacing: 5px;
+    text-align: left;
+    color: black;
+  }
+
+  .top-wrapper h2{
+    opacity: 1.0;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-align: left;
+    color: red; 
+  }
+  
+  .top-wrapper p {
+    opacity: 0.7;
+  }
+  
+  .btn-wrapper {
+    padding-bottom: 80px;
+    text-align: left;
+  }
+
+  .top-name h1 {
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 30px;
+    color: black;
+    opacity: 0.5;
+  }
+
+  .top-name h2 {
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 20px;
+    color: black;
+    opacity: 0.5;
+  }
+
+  .heading h2{
+    padding-bottom: 20px;
+    opacity: 1.0;
+    font-weight: bold;
+    font-size: 40px;
+    color: rgba(255, 0, 0, 0.686);
+  }
+
+  .heading h3{
+    padding-bottom: 20px;
+    opacity: 0.8;
+    font-weight: normal;
+    color: white;
+  }
+
+  .btn {
+    padding: 8px 10px;
+    color: black;
+    display: inline-block;
+    opacity: 0.8;
+    border-radius: 10px; /* 角を丸める*/
+    font-weight: bold;
+  }
+
+  .message{
+    color: white;
+  }
+  
+  .btn:hover {
+    opacity: 1;
+  }
+  
+  .fa {
+    margin-right: 5px;
+  }
+  
+  @media screen and (max-width: 960px) {
+    /* 画面幅960px以下のとき */
+    .header-list {
+      float: right;
+      margin-top: 10px;
+      width: 300px;
+    }
+  }
+
+  header {
+    height: 100px;
+    width: 100%;
+    background-color: rgba(34, 49, 52, 0.9);
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+    padding-top: 20px;
+  }
+  
+  .header-left {
+    float: left;
+    padding-right: 50px;
+  }
+
+  .header-list{
+    float: left;
+  }
+
+  header ul{
+    display: flex;
+  }
+
+  header li{
+    list-style: none;
+    padding-right: 50px;
+    padding-top:  50px;
+  }
+
+  header li a{
+    transition: all 0.5s;
+    color: white;
+  }
+
+  a:hover{
+    color: red; 
+  }
+  
+  .header-right:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .header-right a {
+    line-height: 65px;
+    padding: 0 25px;
+    color: white;
+    display: block;
+  }
+
+  .message-wrapper{
+    background-color: rgb(35, 35, 35);
+  }
+
+  .heading {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    color: #5f5d60;
+  }
+  
+  .heading h2 {
+    font-weight: normal;
+  }
+
+  .heading h3 {
+    font-weight: normal;
+  }
+  
+  .message-wrapper {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 80px;
+    text-align: center;
+  }
+  
+  .message {
+    padding: 15px 40px;
+    background-color: #f02020;
+    box-shadow: 0 7px #7c1b03;
+  }
+  
+  .message:active {
+    position: relative;
+    top: 7px;
+    box-shadow: none;
+  }
+
+  footer {
+    padding-top: 20px;
+    background-color: gray;
+  }
+
+  .infomation p{
+    color: #f02020;
+  } 
+
+  .infomation p2{
+    color: black;
+    font-size: 15px;
+    opacity: 0.6;
+    display: block;
+  }
+
+  .infomation p3{
+    padding-bottom: 20px;
+    color: black;
+    font-size: 15px;
+    opacity: 0.6;
+    display: block;
+  }
