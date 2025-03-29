@@ -19,12 +19,6 @@ body {
     padding: 0 20px; 
   }
   
-
-  .header-left a{
-    color: white;
-    transition: all;
-  }
-
   .container p{
     color: red;
   }
