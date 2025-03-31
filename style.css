@@ -32,7 +32,7 @@ body {
   
   .top-wrapper {
     height: 1000px;
-    background-image: url(IMG_7484_2.jpg);
+    background-image: url(img3.jpeg);
     background-size: cover;
     font-family: cursive;
   }
@@ -43,7 +43,7 @@ body {
     font-size: 90px;
     letter-spacing: 5px;
     text-align: left;
-    color: black;
+    color: white;
   }
 
   .top-wrapper h2{
