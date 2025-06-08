@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>人生食堂</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-left">
+        <h1><a href="/">人生食堂</a></h1>
+        <p>月に一度しか開かない食堂</p>
+      </div>
+
+      <!-- ハンバーガーアイコン -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- ナビゲーションメニュー -->
+      <nav class="header-list" id="nav">
+        <ul>
+          <li><a href="#">MEMBER</a></li>
+          <li><a href="https://line.me/R/ti/p/@108zmfgx?oat_content=url&ts=04301537">RESERVATION</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">NEWS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="top-wrapper3">
+
+    <div class="container3">
+      <h1><span>ABOUT</span></h1>
+      <h2>大人の世界にも</h2>
+      <h3>キッザニアがあればいいのに</h3>
+      <p>
+        未来の選択肢に心が躍らない社会を変えたくて
+        プロジェクトをスタートさせました。
+        
+        自分の好奇心や正解よりも、世間の正しさを
+        選択してしまう世の中を変える存在でありたい。
+        
+        選びたくも選びきれない選択肢を創り続ける
+        今日も誰かのために一生懸命生きる人たちの
+        待ち遠しい未来を創るプロジェクトです。
+      </p>
+    </div>
+    
+    <div class="conditions">
+      <h1>来店条件</h1>
+      <h2>・年齢：10~20代(中学生以上)</h2>
+      <h2>・人生を通して何かに挑戦している人</h2>
+      <h2>・本音で人生について語りたい人</h2>
+    </div>
+
+    <div class="Opening_hours" >
+      <h1>OPEN</h1>
+      <h2>場所：東京のどこか</h2>
+      <h2>時間：第4土曜日　17時~21時</h2>
+    </div>
+
+    <div class="rule">
+      <h1>当店のルール</h1>
+      <h2>・スマホ禁止</h2>
+      <h2>・SNSでの告知、発信禁止</h2>
+      <h2>・相手の話を否定しない</h2>
+    </div>
+
+    <div class="slider-wrapper">
+      <h1>これまでの人生食堂の様子</h1>
+      <div class="slider-track" id="slider-track">
+        <div class="slider">
+          <img src="1.jpg">
+          <img src="2.jpg">
+          <img src="3.jpg">
+          <img src="4.jpg">
+          <img src="5.jpg">
+          <img src="6.jpg">
+          <img src="7.jpg">
+          <img src="8.jpg">
+          <img src="9.jpg">
+        </div>
+      </div>
+    </div>    
+
+  </div>
+   
+  <footer>
+    <div class="container">
+      <div class="top-name">
+        <h1>人生食堂</h1>
+        <div class="infomation">
+          <p2>[OPEN]　第４土曜日 17:00〜21:00</p2>
+          <p3>[PLACE]　東京のどこか</p3>
+          <p>お問い合わせ、予約はLineから</p>
+          <div class="btn-wrapper">
+            <a href="https://line.me/R/ti/p/@108zmfgx?oat_content=url&ts=04301537" class="btn line"><span class="fab fa-line fa-lg"></span></a>
+            <a href="#" class="btn facebook"><span class="fab fa-square-facebook fa-lg"></span></a>
+            <a href="#" class="btn twitter"><span class="fab fa-square-x-twitter fa-lg"></span></a>
+            <a href="#" class="btn instagram"><span class="fab fa-square-instagram fa-lg"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  
+    window.addEventListener("load", () => {
+      const track = document.getElementById("slider-track");
+      const slider = track.querySelector(".slider");
+      const clone = slider.cloneNode(true);
+      track.appendChild(clone);
+    });
+  </script>
+  
+</body>
+</html>
