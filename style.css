@@ -1,234 +1,696 @@
+/* 共通リセット */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-    font-family: "cursive";
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  .container {
-    width: 100%;
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 0 20px; 
-  }
-  
+  font-family: "cursive";
+}
 
-  .header-left a{
-    color: white;
-    transition: all ;
-  }
+a {
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ヘッダー左側のロゴリンク */
+.header-left a{
+  color: white;
+  transition: all;
+}
+
+.container p{
+  color: red;
+}
+
+header {
+  height: 100px;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+  padding-top: 20px;
+}
+
+.header-left {
+  float: left;
+  padding-right: 50px;
+}
+
+.header-list {
+  float: left;
+}
+
+header ul {
+  display: flex;
+}
+
+header li {
+  list-style: none;
+  padding-right: 50px;
+  padding-top: 50px;
+}
+
+header li a {
+  transition: all 0.5s;
+  color: white;
+}
+
+.header-list a:hover {
+  color: red;
+}
+
+.header-right:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.header-right a {
+  line-height: 65px;
+  padding: 0;
+  color: white;
+  display: block;
+}
+
+/* ハンバーガーアイコン */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 25px;
+  gap: 5px;
+  position: absolute;       
+  top: 70px;                 
+  right: 20px;
+}
+
+.hamburger span {
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  width: 100%;
+}
+
+/* トップ画像エリア */
+.top-wrapper {
+  height: 1000px;
+  background-image: url(img3.jpeg);
+  background-size: cover;
+  font-family: serif;
+}
+
+.top-wrapper2{
+  background-color: black;
+  height: 1500px;
+  font-family: serif;
+}
+
+.top-wrapper3{
+  background-color: black;
+  height: 5000px;
+  font-family: serif;
+}
+
+.top-wrapper h1 {
+  padding-top: 150px;
+  opacity: 1.0;
+  font-size: 90px;
+  letter-spacing: 5px;
+  text-align: left;
+  color: white;
+}
+
+.top-wrapper2 h1{
+  padding-top: 200px;
+  opacity: 1.0;
+  font-size: 90px;
+  letter-spacing: 5px;
+  text-align: center;
+  color: white;
+  font-family: serif;
+  padding-bottom: 150px;
+  border-bottom: 2px solid white;
+} 
+
+.top-wrapper2 h1 span{
+  display: inline-block;
+  border-bottom: 2px solid white; /* ← 文字下の線 */
+  padding-bottom: 5px;
+}
+
+.top-wrapper3 h1{
+  padding-top: 200px;
+  opacity: 1.0;
+  font-size: 90px;
+  letter-spacing: 5px;
+  text-align: center;
+  color: white;
+  font-family: serif;
+  padding-bottom: 150px;
+} 
+
+.top-wrapper3 h1 span{
+  display: inline-block;
+  border-bottom: 2px solid white; /* ← 文字下の線 */
+  padding-bottom: 5px;
+}
+
+.top-wrapper h2 {
+  opacity: 1.0;
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-align: left;
+  color: red;
+}
+
+.top-wrapper2 h2 {
+  opacity: 1.0;
+  font-size: 40px;
+  letter-spacing: 2px;
+  text-align: left;
+  color: white;
+  padding-top: 20px;
+  padding-left: 230px
+}
+
+.top-wrapper3 h2 {
+  padding-top: 10px;
+  opacity: 1.0;
+  font-size: 90px;
+  letter-spacing: 5px;
+  text-align: center;
+  color: white;
+}
+
+.top-wrapper3 h3 {
+  padding-top: 10px;
+  opacity: 1.0;
+  font-size: 90px;
+  letter-spacing: 5px;
+  text-align: center;
+  color: white;
+}
+
+.attension{
+  color: white;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.profile{
+  padding-bottom: 100px;
+  border-bottom: 2px solid white;
+}
+
+.profile img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 30px 8px rgba(0, 0, 0, 0.3);
+  margin-left: 150px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.profile img:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
 
 
-  .container p{
-    color: red;
+.profile h2{
+  padding-top: 0;
+  padding-left: 200px;
+}
+
+.profile p {
+  color: white;
+  margin-top: -350px; /* 上に持ち上げ */
+  margin-left: 500px; /* 写真の右にずらす */
+  max-width: 850px; 
+  font-size: 30px;
+}
+
+.container3 p {
+  color: white;
+  padding-top: 100px;
+  padding-left: 150px;
+  max-width: 1300px; 
+  font-size: 30px;
+  padding-bottom: 100px;
+}
+
+.Opening_hours {
+  background-color: gray;
+  max-width: 550px;
+  padding:50px 50px;
+  margin-left: 700px;
+  border-radius: 10px;
+}
+
+.Opening_hours h1 {
+  text-align: left;
+  color: white;
+  font-size: 40px;
+  padding: 0; /* h1のpaddingは削除 */
+}
+
+.Opening_hours h2 {
+  text-align: left;
+  font-size: 25px;
+  padding-left: 20px; 
+}
+
+.conditions {
+  background-image: url(condition.png); 
+  width: 1024px;
+  height: 1024px;
+  padding: 50px 50px;
+  margin: 100px ;       /* 上下に余白を持たせて中央揃え */
+}
+
+
+.conditions h1 {
+  text-align: left;
+  color: white;
+  font-size: 60px;
+  padding: 0; /* h1のpaddingは削除 */
+}
+
+.conditions h2 {
+  text-align: left;
+  font-size: 25px;
+  padding-left: 20px; /* 必要に応じて調整 */
+}
+
+.rule {
+  background-image: url(rule.png); 
+  width: 1024px;
+  height: 1024px;
+  padding: 300px 50px;
+  margin: 100px ;       /* 上下に余白を持たせて中央揃え */
+}
+
+.rule h1 {
+  text-align: left;
+  color: white;
+  font-size: 60px;
+  padding: 0; /* h1のpaddingは削除 */
+}
+
+.rule h2 {
+  text-align: left;
+  font-size: 25px;
+  padding-left: 50px; /* 必要に応じて調整 */
+}
+
+.past-section {
+  background-color: black;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.past-section h2 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.past-section {
+  background-color: black;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.past-section h2 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-wrapper h1{
+  font-size: 50px;
+  padding-bottom: 50px;
+  padding-top: 200px;
+}
+
+.slider-track {
+  display: flex;
+  animation: scrollSlider 40s linear infinite;
+}
+
+.slider {
+  display: flex;
+}
+
+.slider img {
+  width: 500px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+@keyframes scrollSlider {
+  0% {
+    transform: translateX(0);
   }
-  
-  .top-wrapper {
-    height: 1000px;
-    background-image: url(img3.jpeg);
-    background-size: cover;
-    font-family: cursive;
+  100% {
+    transform: translateX(-50%);
   }
-  
+}
+
+.btn-wrapper {
+  padding-bottom: 80px;
+  text-align: left;
+}
+
+/* メッセージセクション */
+.message-wrapper {
+  background-color: black;
+  border-top: 2px solid rgb(71, 71, 71);
+  border-bottom: 2px solid rgb(71, 71, 71);
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.heading {
+  padding-top: 60px;
+  padding-bottom: 30px;
+  color: white;
+}
+
+.heading h2 {
+  padding-bottom: 20px;
+  opacity: 1.0;
+  font-weight: bold;
+  font-size: 40px;
+  color: rgba(255, 0, 0, 0.686);
+}
+
+.heading h3 {
+  padding-bottom: 20px;
+  opacity: 0.8;
+  font-weight: normal;
+  color: white;
+}
+
+.message {
+  padding: 15px 40px;
+  background-color: #f02020;
+  box-shadow: 0 7px #7c1b03;
+  color: white;
+}
+
+.message:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+
+/* フッター */
+footer {
+  padding-top: 20px;
+  background-color: rgb(42, 41, 41);
+}
+
+.top-name h1 {
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 30px;
+  color: white;
+  opacity: 1.0;
+}
+
+.top-name h2 {
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 20px;
+  color: black;
+  opacity: 0.5;
+}
+
+.infomation p {
+  color: white;
+  opacity: 0.8;
+}
+
+.infomation p2 {
+  color: white;
+  font-size: 15px;
+  display: block;
+}
+
+.infomation p3 {
+  padding-bottom: 20px;
+  color: white;
+  font-size: 15px;
+  display: block;
+}
+
+/* ボタン共通 */
+.btn {
+  padding: 8px 10px;
+  color: white;
+  display: inline-block;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.fa {
+  margin-right: 5px;
+}
+
+/* 半画面or携帯画面用 */
+@media screen and (max-width: 768px) {
   .top-wrapper h1 {
-    padding-top: 300px; 
+    padding-top: 150px;
     opacity: 1.0;
-    font-size: 90px;
+    font-size: 70px;
     letter-spacing: 5px;
     text-align: left;
     color: white;
   }
-
-  .top-wrapper h2{
+  
+  .top-wrapper h2 {
     opacity: 1.0;
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 2px;
     text-align: left;
-    color: red; 
-  }
-  
-  .top-wrapper p {
-    opacity: 0.7;
-  }
-  
-  .btn-wrapper {
-    padding-bottom: 80px;
-    text-align: left;
+    color: red;
   }
 
-  .top-name h1 {
-    margin-bottom: 10px;
-    text-align: left;
-    font-size: 30px;
-    color: black;
-    opacity: 0.5;
-  }
-
-  .top-name h2 {
-    margin-bottom: 10px;
-    text-align: left;
-    font-size: 20px;
-    color: black;
-    opacity: 0.5;
-  }
-
-  .heading h2{
-    padding-bottom: 20px;
+  .top-wrapper2 h1{
+    padding-top: 150px;
     opacity: 1.0;
-    font-weight: bold;
+    font-size: 80px;
+    letter-spacing: 5px;
+    text-align: center;
+    color: white;
+    font-family: serif;
+    border-bottom: 2px solid white;
+  } 
+
+  .top-wrapper2 h2 {
+    opacity: 1.0;
     font-size: 40px;
-    color: rgba(255, 0, 0, 0.686);
-  }
-
-  .heading h3{
-    padding-bottom: 20px;
-    opacity: 0.8;
-    font-weight: normal;
+    letter-spacing: 2px;
+    text-align: left;
     color: white;
-  }
-
-  .btn {
-    padding: 8px 10px;
-    color: black;
-    display: inline-block;
-    opacity: 0.8;
-    border-radius: 10px; /* 角を丸める*/
-    font-weight: bold;
-  }
-
-  .message{
-    color: white;
-  }
-  
-  .btn:hover {
-    opacity: 1;
-  }
-  
-  .fa {
-    margin-right: 5px;
-  }
-  
-  @media screen and (max-width: 960px) {
-    /* 画面幅960px以下のとき */
-    .header-list {
-      float: right;
-      margin-top: 10px;
-      width: 300px;
-    }
-  }
-
-  header {
-    height: 100px;
-    width: 100%;
-    background-color: rgba(34, 49, 52, 0.9);
-    position: fixed;
-    top: 0px;
-    z-index: 10;
     padding-top: 20px;
+    padding-left: 115px
+  }
+
+  .top-wrapper3 h2 {
+    padding-top: 10px;
+    opacity: 1.0;
+    font-size: 40px;
+    letter-spacing: 5px;
+    text-align: center;
+    color: white;
   }
   
-  .header-left {
-    float: left;
-    padding-right: 50px;
+  .top-wrapper3 h3 {
+    padding-top: 10px;
+    opacity: 1.0;
+    font-size: 40px;
+    letter-spacing: 5px;
+    text-align: center;
+    color: white;
+  }
+  
+  .profile{
+    padding-bottom: 100px;
+    border-bottom: 2px solid white;
+  }
+  
+  .profile img {
+    width: 250px;         
+    height: 250px;
+    object-fit: cover;    /* 丸円に収める*/
+    border-radius: 50%;   /* 丸く切り抜く */
+    border: 3px solid white;
+    box-shadow: 0 30px 8px rgba(0, 0, 0, 0.3);
+    margin-left: 30px;
+  }
+  
+  .profile h2{
+    padding-top: 0;
+    padding-left: 80px;
+  }
+  
+  .profile p {
+    color: white;
+    margin-top: -290px; /* 上に持ち上げ */
+    margin-left: 320px; /* 写真の右にずらす */
+    max-width: 300px; 
+    font-size: 15px;
   }
 
-  .header-list{
-    float: left;
+  .container3 p {
+    color: white;
+    padding-top: 50px;
+    padding-left: 50px;
+    max-width: 650px; 
+    font-size: 20px;
   }
 
-  header ul{
+  .Opening_hours {
+    background-color: gray;
+    max-width: 450px;
+    padding: 50px 50px; /* 文字周囲だけを囲む余白設定 */
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-bottom: 200px;
+  }
+  
+  .Opening_hours h1 {
+    text-align: left;
+    color: white;
+    font-size: 30px;
+    padding: 0; /* h1のpaddingは削除 */
+  }
+  
+  .Opening_hours h2 {
+    text-align: left;
+    font-size: 19px;
+    padding-left: 20px; /* 必要に応じて調整 */
+  }
+
+  body {
+    overflow-x: hidden; /* 横スクロールを防止 */
+  }
+
+  .conditions {
+    background-image: url(condition2.png); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 100%;         /* 横幅いっぱいに広げる */
+    height: 500px;      
+    padding: 60px 20px;  /* 内側の余白を小さく */
+    margin: 0 auto;      /* 横中央に揃える */
+    box-sizing: border-box;
+    margin-bottom: 200px;
+  }
+
+  .conditions h1,
+  .conditions h2 {
+    font-size: 25px;
+    text-align: left;
+    color: white;
+  }
+
+  .rule {
+    background-image: url(rule.png); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 100%;         /* 横幅いっぱいに広げる */
+    height: 500px;      
+    padding: 100px 20px;  /* 内側の余白を小さく */
+    margin: 0 auto;      /* 横中央に揃える */
+    box-sizing: border-box;
+  }
+
+  .rule h1,
+  .rule h2 {
+    font-size: 25px;
+    text-align: left;
+    color: white;
+  }
+
+  .slider-wrapper h1{
+    font-size: 30px;
+    padding-bottom: 50px;
+    padding-top: 100px;
+  }
+
+  .slider img {
+    width: 250px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+  }
+
+  .header-list {
+    display: none;
+    flex-direction: column;   
+    background-color: gray;
+    width: 30%;
+    padding-right: 20px;           /* ← メニューの右側に余白をつける */
+    position: absolute;
+    top: 80px;                    /* headerの下に表示 */
+    right: 0;
+  }
+
+  .header-list.active {
     display: flex;
   }
 
-  header li{
-    list-style: none;
-    padding-right: 50px;
-    padding-top:  50px;
+  .header-list ul {
+    flex-direction: column;
+    align-items: center;         /* ← ulも右寄せ */
+    padding: 0;
+    width: 100%;
   }
 
-  header li a{
-    transition: all 0.5s;
-    color: white;
+  .header-list li {
+    padding: 10px 0;
+    padding-right: 0;
   }
 
-  .header-list a:hover{
-    color: red; 
-  }
-  
-  .header-right:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-  
-  .header-right a {
-    line-height: 65px;
-    padding: 0 25px;
-    color: white;
-    display: block;
-  }
-
-  .message-wrapper{
-    background-color: rgb(35, 35, 35);
-  }
-
-  .heading {
-    padding-top: 60px;
-    padding-bottom: 30px;
-    color: #5f5d60;
-  }
-  
-  .heading h2 {
-    font-weight: normal;
-  }
-
-  .heading h3 {
-    font-weight: normal;
-  }
-  
-  .message-wrapper {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 80px;
+  .header-left {
+    float: none;
     text-align: center;
   }
-  
-  .message {
-    padding: 15px 40px;
-    background-color: #f02020;
-    box-shadow: 0 7px #7c1b03;
-  }
-  
-  .message:active {
-    position: relative;
-    top: 7px;
-    box-shadow: none;
-  }
-
-  footer {
-    padding-top: 20px;
-    background-color: gray;
-  }
-
-  .infomation p{
-    color: #f02020;
-  } 
-
-  .infomation p2{
-    color: black;
-    font-size: 15px;
-    opacity: 0.6;
-    display: block;
-  }
-
-  .infomation p3{
-    padding-bottom: 20px;
-    color: black;
-    font-size: 15px;
-    opacity: 0.6;
-    display: block;
-  }
+}
